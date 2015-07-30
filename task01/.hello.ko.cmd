@@ -1,0 +1,1 @@
+cmd_/root/github/eudyptula-challenge/task01/hello.ko := ld -r -m elf_x86_64 -T /usr/src/kernels/3.10.0-229.4.2.el7.x86_64/scripts/module-common.lds --build-id  -o /root/github/eudyptula-challenge/task01/hello.ko /root/github/eudyptula-challenge/task01/hello.o /root/github/eudyptula-challenge/task01/hello.mod.o
