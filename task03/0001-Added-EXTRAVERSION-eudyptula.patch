@@ -1,7 +1,7 @@
-From 9cfd8eb040580758677fcecdf081e860bba61ab0 Mon Sep 17 00:00:00 2001
+From 2e937e56909556c650cf1732172600a4cb2dea81 Mon Sep 17 00:00:00 2001
 From: atwlam <crudalex@gmail.com>
-Date: Mon, 3 Aug 2015 16:56:52 +0800
-Subject: [PATCH 1/1] Modify Makefile with EXTRAVERSION as -eudyptula
+Date: Tue, 4 Aug 2015 00:35:50 +0800
+Subject: [PATCH 1/1] Added EXTRAVERSION -eudyptula
 
 Signed-off-by: atwlam <crudalex@gmail.com>
 ---
@@ -9,15 +9,15 @@ Signed-off-by: atwlam <crudalex@gmail.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/Makefile b/Makefile
-index e79448d..c9580d8 100644
+index afabc44..92b93e2 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -1,7 +1,7 @@
  VERSION = 4
  PATCHLEVEL = 2
  SUBLEVEL = 0
--EXTRAVERSION = -rc5
-+EXTRAVERSION = -eudyptula
+-EXTRAVERSION = -rc4
++EXTRAVERSION = -rc4-eudyptula
  NAME = Hurr durr I'ma sheep
  
  # *DOCUMENTATION*
