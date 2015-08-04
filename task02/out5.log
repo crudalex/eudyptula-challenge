@@ -1,0 +1,10 @@
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 4.2.0-rc4-00107-gdbe0811 (atwlam@linux-3k8s) (gcc version 4.8.3 20140911 (Red Hat 4.8.3-9) (GCC) ) #1 SMP Fri Jul 31 16:04:03 HKT 2015
+[    0.000000] Command line: BOOT_IMAGE=/vmlinuz-4.2.0-rc4-00107-gdbe0811 root=/dev/mapper/centos_linux--3k8s-root ro rd.lvm.lv=centos_linux-3k8s/root crashkernel=auto rd.lvm.lv=centos_linux-3k8s/swap vconsole.font=latarcyrheb-sun16 vconsole.keymap=us rhgb quiet
+[    0.000000] Disabled fast string operations
+[    0.000000] x86/fpu: xstate_offset[2]: 0240, xstate_sizes[2]: 0100
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x01: 'x87 floating point registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x02: 'SSE registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x04: 'AVX registers'
