@@ -4,7 +4,7 @@
 
 MODULE_INFO(vermagic, VERMAGIC_STRING);
 
-__visible struct module __this_module
+struct module __this_module
 __attribute__((section(".gnu.linkonce.this_module"))) = {
 	.name = KBUILD_MODNAME,
 	.init = init_module,
@@ -17,8 +17,8 @@ __attribute__((section(".gnu.linkonce.this_module"))) = {
 static const struct modversion_info ____versions[]
 __used
 __attribute__((section("__versions"))) = {
-	{ 0x29b86e27, __VMLINUX_SYMBOL_STR(module_layout) },
-	{ 0xdb7305a1, __VMLINUX_SYMBOL_STR(__stack_chk_fail) },
+	{ 0x28950ef1, __VMLINUX_SYMBOL_STR(module_layout) },
+	{ 0xf0fdf6cb, __VMLINUX_SYMBOL_STR(__stack_chk_fail) },
 	{ 0x27e1a049, __VMLINUX_SYMBOL_STR(printk) },
 	{ 0xeae3dfd6, __VMLINUX_SYMBOL_STR(__const_udelay) },
 	{ 0xbdfb6dbb, __VMLINUX_SYMBOL_STR(__fentry__) },
@@ -30,4 +30,5 @@ __attribute__((section(".modinfo"))) =
 "depends=";
 
 
-MODULE_INFO(srcversion, "4670F5CE3434421A9D694CF");
+MODULE_INFO(srcversion, "B2C4BF92BFA3729E39F51D4");
+MODULE_INFO(rhelversion, "7.1");
