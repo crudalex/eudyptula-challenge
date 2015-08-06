@@ -10,13 +10,13 @@ MODULE_DESCRIPTION("Hello World");
 
 static int __init hello1(void)
 {
-	printk(KERN_DEBUG "Hello World!\n");
+	pr_debug("Hello World!\n");
 	return 0;
 }
 
 static void __exit exit1(void)
 {
-	printk(KERN_DEBUG "Good Bye!\n");
+	pr_debug("Good Bye!\n");
 }
 
 module_init(hello1);
