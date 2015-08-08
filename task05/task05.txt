@@ -16,3 +16,7 @@ Yes, so simple, and yet, it's a bit tricky.  As a hint, go read chapter
 14 of the book, "Linux Device Drivers, 3rd edition."  Don't worry, it's
 free, and online, no need to go buy anything.
 
+189:43 -> ../../devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3
+13:71 -> ../../devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3/1-2.3:1.0/input/input44/event7
+250:4 -> ../../devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3/1-2.3:1.0/0003:03F0:0324.0023/hidraw/hidraw4
+
