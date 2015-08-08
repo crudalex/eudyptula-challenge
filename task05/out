@@ -1,0 +1,87 @@
+make -C /lib/modules/3.10.0-229.7.2.el7.x86_64/build M=/home/atwlam/github/eudyptula-challenge/task05 modules
+make[1]: Entering directory `/usr/src/kernels/3.10.0-229.7.2.el7.x86_64'
+  CC [M]  /home/atwlam/github/eudyptula-challenge/task05/hello.o
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:11:15: error: variable ‘skel_driver’ has initializer but incomplete type
+ static struct usb_driver skel_driver = {
+               ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:12:2: error: unknown field ‘name’ specified in initializer
+  .name = "skeleton",
+  ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:12:2: warning: excess elements in struct initializer [enabled by default]
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:12:2: warning: (near initialization for ‘skel_driver’) [enabled by default]
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:13:2: error: unknown field ‘probe’ specified in initializer
+  .probe = skel_probe,
+  ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:13:11: error: ‘skel_probe’ undeclared here (not in a function)
+  .probe = skel_probe,
+           ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:13:2: warning: excess elements in struct initializer [enabled by default]
+  .probe = skel_probe,
+  ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:13:2: warning: (near initialization for ‘skel_driver’) [enabled by default]
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:14:2: error: unknown field ‘disconnect’ specified in initializer
+  .disconnect = skel_disconnect,
+  ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:14:16: error: ‘skel_disconnect’ undeclared here (not in a function)
+  .disconnect = skel_disconnect,
+                ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:14:2: warning: excess elements in struct initializer [enabled by default]
+  .disconnect = skel_disconnect,
+  ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:14:2: warning: (near initialization for ‘skel_driver’) [enabled by default]
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:15:2: error: unknown field ‘fops’ specified in initializer
+  .fops = &skel_fops,
+  ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:15:11: error: ‘skel_fops’ undeclared here (not in a function)
+  .fops = &skel_fops,
+           ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:15:2: warning: excess elements in struct initializer [enabled by default]
+  .fops = &skel_fops,
+  ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:15:2: warning: (near initialization for ‘skel_driver’) [enabled by default]
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:16:2: error: unknown field ‘minor’ specified in initializer
+  .minor = USB_SKEL_MINOR_BASE,
+  ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:16:11: error: ‘USB_SKEL_MINOR_BASE’ undeclared here (not in a function)
+  .minor = USB_SKEL_MINOR_BASE,
+           ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:16:2: warning: excess elements in struct initializer [enabled by default]
+  .minor = USB_SKEL_MINOR_BASE,
+  ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:16:2: warning: (near initialization for ‘skel_driver’) [enabled by default]
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:17:2: error: unknown field ‘id_table’ specified in initializer
+  .id_table = skel_table,
+  ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:17:14: error: ‘skel_table’ undeclared here (not in a function)
+  .id_table = skel_table,
+              ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:17:2: warning: excess elements in struct initializer [enabled by default]
+  .id_table = skel_table,
+  ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:17:2: warning: (near initialization for ‘skel_driver’) [enabled by default]
+/home/atwlam/github/eudyptula-challenge/task05/hello.c: In function ‘hello1’:
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:23:2: error: implicit declaration of function ‘usb_register’ [-Werror=implicit-function-declaration]
+  usb_register(&skel_driver);
+  ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c: In function ‘exit1’:
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:31:2: error: implicit declaration of function ‘usb_deregister’ [-Werror=implicit-function-declaration]
+  usb_deregister(&skel_driver);
+  ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c: At top level:
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:37:29: error: array type has incomplete element type
+ static struct usb_device_id skel_table[] = {
+                             ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:38:2: error: implicit declaration of function ‘USB_DEVICE’ [-Werror=implicit-function-declaration]
+  { USB_DEVICE(USB_SKEL_VENDOR_ID, USB_SKEL_PRODUCT_ID) },
+  ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:38:15: error: ‘USB_SKEL_VENDOR_ID’ undeclared here (not in a function)
+  { USB_DEVICE(USB_SKEL_VENDOR_ID, USB_SKEL_PRODUCT_ID) },
+               ^
+/home/atwlam/github/eudyptula-challenge/task05/hello.c:38:35: error: ‘USB_SKEL_PRODUCT_ID’ undeclared here (not in a function)
+  { USB_DEVICE(USB_SKEL_VENDOR_ID, USB_SKEL_PRODUCT_ID) },
+                                   ^
+cc1: some warnings being treated as errors
+make[2]: *** [/home/atwlam/github/eudyptula-challenge/task05/hello.o] Error 1
+make[1]: *** [_module_/home/atwlam/github/eudyptula-challenge/task05] Error 2
+make[1]: Leaving directory `/usr/src/kernels/3.10.0-229.7.2.el7.x86_64'
+make: *** [all] Error 2
