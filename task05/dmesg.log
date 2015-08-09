@@ -1,0 +1,9 @@
+[18739.416680] usb 1-2.3: new low-speed USB device number 24 using xhci_hcd
+[18739.500944] usb 1-2.3: New USB device found, idVendor=03f0, idProduct=0324
+[18739.500952] usb 1-2.3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[18739.500957] usb 1-2.3: Product: HP Basic USB Keyboard
+[18739.500961] usb 1-2.3: Manufacturer: Lite-On Technology Corp.
+[18739.501198] usb 1-2.3: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
+[18739.505534] input: Lite-On Technology Corp. HP Basic USB Keyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3/1-2.3:1.0/input/input31
+[18739.505713] hid-generic 0003:03F0:0324.0016: input,hidraw2: USB HID v1.10 Keyboard [Lite-On Technology Corp. HP Basic USB Keyboard] on usb-0000:00:14.0-2.3/input0
+[18739.517372] usbcore: registered new interface driver skeleton

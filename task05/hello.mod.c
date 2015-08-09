@@ -28,6 +28,7 @@ __used
 __attribute__((section(".modinfo"))) =
 "depends=";
 
+MODULE_ALIAS("usb:v*p*d*dc*dsc*dp*ic03isc01ip01in*");
 
-MODULE_INFO(srcversion, "5DE4386EA951F88B789781E");
+MODULE_INFO(srcversion, "5AB076A714A819E61E7F56E");
 MODULE_INFO(rhelversion, "7.1");
