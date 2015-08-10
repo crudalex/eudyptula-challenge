@@ -17,9 +17,9 @@ __attribute__((section(".gnu.linkonce.this_module"))) = {
 static const struct modversion_info ____versions[]
 __used
 __attribute__((section("__versions"))) = {
-	{ 0x28950ef1, __VMLINUX_SYMBOL_STR(module_layout) },
-	{ 0x59a71e46, __VMLINUX_SYMBOL_STR(usb_deregister) },
-	{ 0xbba44c99, __VMLINUX_SYMBOL_STR(usb_register_driver) },
+	{ 0x3c4fbfa6, __VMLINUX_SYMBOL_STR(module_layout) },
+	{ 0xffa4e389, __VMLINUX_SYMBOL_STR(usb_deregister) },
+	{ 0x6ff0e563, __VMLINUX_SYMBOL_STR(usb_register_driver) },
 	{ 0xf087137d, __VMLINUX_SYMBOL_STR(__dynamic_pr_debug) },
 };
 
