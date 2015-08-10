@@ -1,0 +1,9 @@
+filename:       /lib/modules/3.10.0-229.11.1.el7.x86_64/hello.ko
+description:    Hello World
+author:         atwlam
+license:        GPL
+rhelversion:    7.1
+srcversion:     6016A953555D44B5E09C404
+alias:          usb:v*p*d*dc*dsc*dp*ic03isc01ip01in*
+depends:        
+vermagic:       3.10.0-229.11.1.el7.x86_64 SMP mod_unload modversions 

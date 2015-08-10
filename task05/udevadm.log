@@ -1,0 +1,16 @@
+KERNEL[291.698695] add      /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3 (usb)
+KERNEL[291.699908] add      /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3/1-2.3:1.0 (usb)
+KERNEL[291.703233] add      /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3/1-2.3:1.0/0003:03F0:0324.000B (hid)
+KERNEL[291.703451] add      /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3/1-2.3:1.0/input/input20 (input)
+KERNEL[291.703483] add      /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3/1-2.3:1.0/input/input20/event5 (input)
+KERNEL[291.703585] add      /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3/1-2.3:1.0/0003:03F0:0324.000B/hidraw/hidraw2 (hidraw)
+UDEV  [291.710663] add      /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3 (usb)
+KERNEL[291.712154] add      /module/hello (module)
+UDEV  [291.712248] add      /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3/1-2.3:1.0 (usb)
+UDEV  [291.713576] add      /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3/1-2.3:1.0/0003:03F0:0324.000B (hid)
+UDEV  [291.714120] add      /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3/1-2.3:1.0/input/input20 (input)
+UDEV  [291.714139] add      /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3/1-2.3:1.0/0003:03F0:0324.000B/hidraw/hidraw2 (hidraw)
+UDEV  [291.714395] add      /module/hello (module)
+UDEV  [291.715694] add      /devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2.3/1-2.3:1.0/input/input20/event5 (input)
+
+
