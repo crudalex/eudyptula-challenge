@@ -17,9 +17,7 @@ __attribute__((section(".gnu.linkonce.this_module"))) = {
 static const struct modversion_info ____versions[]
 __used
 __attribute__((section("__versions"))) = {
-	{ 0x3c4fbfa6, __VMLINUX_SYMBOL_STR(module_layout) },
-	{ 0xffa4e389, __VMLINUX_SYMBOL_STR(usb_deregister) },
-	{ 0x6ff0e563, __VMLINUX_SYMBOL_STR(usb_register_driver) },
+	{ 0x28950ef1, __VMLINUX_SYMBOL_STR(module_layout) },
 	{ 0xf087137d, __VMLINUX_SYMBOL_STR(__dynamic_pr_debug) },
 };
 
@@ -30,5 +28,5 @@ __attribute__((section(".modinfo"))) =
 
 MODULE_ALIAS("usb:v*p*d*dc*dsc*dp*ic03isc01ip01in*");
 
-MODULE_INFO(srcversion, "5AB076A714A819E61E7F56E");
+MODULE_INFO(srcversion, "6016A953555D44B5E09C404");
 MODULE_INFO(rhelversion, "7.1");
