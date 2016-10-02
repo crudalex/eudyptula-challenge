@@ -1,10 +1,9 @@
-obj-m := hello.o
+kerneldir   :=    /lib/modules/$(shell uname -r)/build
+pwd         :=    $(shell pwd)
+obj-m       :=    eudyptula.o
 
-kerneldir := /lib/modules/$(shell uname -r)/build
-pwd := $(shell pwd)
-
-all:
+modules:
 	make -C $(kerneldir) M=$(pwd) modules
 
 clean:
-	make -C $(kerneldir) M=$(pwd) clean
+	rm -rf *.o *~ core .depend .*.cmd *.ko *.mod.c .tmp_versions modules.order Module.symvers

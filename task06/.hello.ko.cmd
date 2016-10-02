@@ -1,1 +1,0 @@
-cmd_/home/atwlam/git/eudyptula-challenge/task06/hello.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/atwlam/git/eudyptula-challenge/task06/hello.ko /home/atwlam/git/eudyptula-challenge/task06/hello.o /home/atwlam/git/eudyptula-challenge/task06/hello.mod.o
