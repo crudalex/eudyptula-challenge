@@ -1,0 +1,16 @@
+rm -rf *.o *~ core .depend .*.cmd *.ko *.mod.c .tmp_versions modules.order Module.symvers
+make -C /lib/modules/4.4.0-36-generic/build M=/home/atwlam/Git/eudyptula-challenge/task06 modules
+make[1]: Entering directory '/usr/src/linux-headers-4.4.0-36-generic'
+  CC [M]  /home/atwlam/Git/eudyptula-challenge/task06/eudyptula.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/atwlam/Git/eudyptula-challenge/task06/eudyptula.mod.o
+  LD [M]  /home/atwlam/Git/eudyptula-challenge/task06/eudyptula.ko
+make[1]: Leaving directory '/usr/src/linux-headers-4.4.0-36-generic'
+eudyptula              16384  0
+crw-rw-rw- 1 root root 10, 52 Oct  2 16:01 /dev/eudyptula
+[ 2449.179532] Module registered
+[ 2449.202872] 919705445944
+[ 2449.203007] correct write
+[ 2449.203043] invalid write: assigned_id = 919705445944, input_id = 999999999999
+[ 2449.213637] Module deregistered

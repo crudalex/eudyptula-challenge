@@ -1,0 +1,1 @@
+cmd_/home/atwlam/Git/eudyptula-challenge/task05-a/hotplug.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/atwlam/Git/eudyptula-challenge/task05-a/hotplug.ko /home/atwlam/Git/eudyptula-challenge/task05-a/hotplug.o /home/atwlam/Git/eudyptula-challenge/task05-a/hotplug.mod.o
