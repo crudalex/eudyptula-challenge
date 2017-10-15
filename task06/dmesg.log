@@ -1,5 +1,0 @@
-[ 2449.179532] Module registered
-[ 2449.202872] 919705445944
-[ 2449.203007] correct write
-[ 2449.203043] invalid write: assigned_id = 919705445944, input_id = 999999999999
-[ 2449.213637] Module deregistered

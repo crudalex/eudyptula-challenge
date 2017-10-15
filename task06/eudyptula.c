@@ -1,89 +1,73 @@
-#include <linux/kernel.h>
 #include <linux/module.h>
-#include <linux/init.h>
-#include <linux/uaccess.h>
-#include <linux/fs.h>
 #include <linux/miscdevice.h>
-static struct miscdevice eudyptula_dev;
-// static long assigned_id;
-// assigned_id = 919705445944;
-// static const char assigned_id[] = "919705445944";
-static const long assigned_id = 919705445944;
+#include <linux/fs.h>
+#include <linux/poll.h>
+#include <linux/errno.h>
 
-int eudyptula_open(struct inode *inode, struct file *filp) { return 0; }
+#define MY_ID "919705445944"
+#define MY_ID_LEN 13	/* ID length including the final NULL */
 
-static ssize_t eudyptula_read(struct file *file, char __user *user,
-			size_t count, loff_t *offset) {
-	pr_info("%ld\n", assigned_id);
-	return 0;
-}
-static ssize_t eudyptula_write(struct file *file, const char __user *user,
-			size_t count, loff_t *offset){
+static ssize_t eudyptula_read(struct file *file, char __user *buf,
+			size_t count, loff_t *ppos)
+{
+	char *eudyptula_str = MY_ID;
 
-	char buf[count];
-	// int input;
-	long id;
+	if (*ppos != 0)
+		return 0;
 
-	if (copy_from_user(buf, user, count))
-		return -EFAULT;
-	buf[count] = '\0';
-
-	if (kstrtol(buf, 0, &id))
+	if ((count < MY_ID_LEN) ||
+		(copy_to_user(buf, eudyptula_str, MY_ID_LEN)))
 		return -EINVAL;
 
-	// kstrtoint(buf, 10, &input);
-	// pr_info("%s\n", buf);
-	// if (strcmp(buf, assigned_id) != 0) {
-	if (id != assigned_id) {
-		pr_err("invalid write: assigned_id = %ld, input_id = %ld\n",
-			assigned_id, id);
-		return -EFAULT;
-	}
-
-	pr_info("correct write\n");
-	// printk(KERN_INFO, "correct write\n");
+	*ppos += count;
 	return count;
 }
 
-const struct file_operations eudyptula_fops = {
+static ssize_t eudyptula_write(struct file *file, char const __user *buf,
+			size_t count, loff_t *ppos)
+{
+	char *eudyptula_str = MY_ID;
+	char input[MY_ID_LEN];
+
+	if ((count != MY_ID_LEN) ||
+		(copy_from_user(input, buf, MY_ID_LEN)) ||
+		(strncmp(eudyptula_str, input, MY_ID_LEN - 1)))
+		return -EINVAL;
+	else
+		return count;
+}
+
+static const struct file_operations eudyptula_fops = {
 	.owner = THIS_MODULE,
 	.read = eudyptula_read,
-	.write = eudyptula_write,
-	.open = eudyptula_open,
-	// .release = eudyptula_close,
+	.write = eudyptula_write
 };
 
-static int __init init1(void)
+static struct miscdevice eudyptula_dev = {
+	MISC_DYNAMIC_MINOR,
+	"eudyptula",
+	&eudyptula_fops
+};
+
+static int __init eudyptula_init(void)
 {
-	// int misc_register(struct miscdevice * misc);
+	int ret;
 
-	int retval;
+	ret = misc_register(&eudyptula_dev);
+	pr_debug("Hello World!\n");
 
-	eudyptula_dev.minor = MISC_DYNAMIC_MINOR;
-	eudyptula_dev.name = "eudyptula";
-	eudyptula_dev.fops = &eudyptula_fops;
-
-	retval = misc_register(&eudyptula_dev);
-	if (retval)
-		return retval;
-
-	pr_info("Module registered\n");
-	return 0;
+	return ret;
 }
 
-static void __exit exit1(void)
+static void __exit eudyptula_exit(void)
 {
-	// int misc_deregister(struct miscdevice * misc);
-
-	// int retval;
-	// retval = misc_deregister(&eudyptula_dev);
 	misc_deregister(&eudyptula_dev);
-	pr_info("Module deregistered\n");
 }
 
-module_init(init1);
-module_exit(exit1);
+module_init(eudyptula_init);
+module_exit(eudyptula_exit);
 
-MODULE_DESCRIPTION("Misc character device");
-MODULE_AUTHOR("atwlam");
 MODULE_LICENSE("GPL");
+MODULE_AUTHOR("919705445944");
+MODULE_DESCRIPTION("Misc char eudyptula module");
+
