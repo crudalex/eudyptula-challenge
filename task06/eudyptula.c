@@ -4,19 +4,20 @@
 #include <linux/uaccess.h>
 #include <linux/fs.h>
 #include <linux/miscdevice.h>
-static struct miscdevice eudy_dev;
+static struct miscdevice eudyptula_dev;
 // static long assigned_id;
 // assigned_id = 919705445944;
 // static const char assigned_id[] = "919705445944";
 static const long assigned_id = 919705445944;
 
-int eudy_open(struct inode *inode, struct file *filp) { return 0; }
-ssize_t eudy_read(struct file *file, char __user *user,
+int eudyptula_open(struct inode *inode, struct file *filp) { return 0; }
+
+static ssize_t eudyptula_read(struct file *file, char __user *user,
 			size_t count, loff_t *offset) {
 	pr_info("%ld\n", assigned_id);
 	return 0;
 }
-ssize_t eudy_write(struct file *file, const char __user *user,
+static ssize_t eudyptula_write(struct file *file, const char __user *user,
 			size_t count, loff_t *offset){
 
 	char buf[count];
@@ -44,12 +45,12 @@ ssize_t eudy_write(struct file *file, const char __user *user,
 	return count;
 }
 
-const struct file_operations eudy_fops = {
+const struct file_operations eudyptula_fops = {
 	.owner = THIS_MODULE,
-	.read = eudy_read,
-	.write = eudy_write,
-	.open = eudy_open,
-	// .release = eudy_close,
+	.read = eudyptula_read,
+	.write = eudyptula_write,
+	.open = eudyptula_open,
+	// .release = eudyptula_close,
 };
 
 static int __init init1(void)
@@ -58,11 +59,11 @@ static int __init init1(void)
 
 	int retval;
 
-	eudy_dev.minor = MISC_DYNAMIC_MINOR;
-	eudy_dev.name = "eudyptula";
-	eudy_dev.fops = &eudy_fops;
+	eudyptula_dev.minor = MISC_DYNAMIC_MINOR;
+	eudyptula_dev.name = "eudyptula";
+	eudyptula_dev.fops = &eudyptula_fops;
 
-	retval = misc_register(&eudy_dev);
+	retval = misc_register(&eudyptula_dev);
 	if (retval)
 		return retval;
 
@@ -75,8 +76,8 @@ static void __exit exit1(void)
 	// int misc_deregister(struct miscdevice * misc);
 
 	// int retval;
-	// retval = misc_deregister(&eudy_dev);
-	misc_deregister(&eudy_dev);
+	// retval = misc_deregister(&eudyptula_dev);
+	misc_deregister(&eudyptula_dev);
 	pr_info("Module deregistered\n");
 }
 
